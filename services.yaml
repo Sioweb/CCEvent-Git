@@ -1,0 +1,7 @@
+services:
+    oxid.ccevent.git:
+      class: Sioweb\CCEvent\Git\Command\AddGitCommand
+      tags:
+        - { name: 'console.command' }
+      bind:
+        $projectDir: '%kernel.project_dir%'
