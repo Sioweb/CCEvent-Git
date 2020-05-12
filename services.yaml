@@ -6,7 +6,7 @@ services:
   oxid.ccevent.git:
     class: Sioweb\CCEvent\Git\Command\AddGitCommand
     tags:
-      - { name: 'console.command' }
+      - { name: 'console.command', command: 'ccevent:add:git', description: 'Add git directory to configured composer packages' }
     bind:
       $projectDir: '%kernel.project_dir%'
     public: true
