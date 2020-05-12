@@ -73,6 +73,8 @@ class Git
             $execFile = $binPath . 'console';
         } elseif(file_exists($binPath . 'contao-console')) {
             $execFile = $binPath . 'contao-console';
+        } elseif(file_exists($binPath . 'oe-console')) {
+            $execFile = $binPath . 'oe-console';
         } elseif(file_exists($binPath . 'oxid')) {
             $execFile = $binPath . 'oxid';
         }
