@@ -45,8 +45,8 @@ class Git
         static::executeCommand('ccevent:add:git ' . implode(' ', [
             $Arguments['repository'],
             $package->getName(),
-            '--target-dir='.$package->getSourceUrl(),
-            '--vendor-dir='.$event->getComposer()->getConfig()->get('vendor-dir'),
+            // '--target-dir='.$package->getSourceUrl(),
+            // '--vendor-dir='.$event->getComposer()->getConfig()->get('vendor-dir'),
         ]), $event);
     }
 

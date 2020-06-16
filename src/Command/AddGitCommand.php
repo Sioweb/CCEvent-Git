@@ -71,7 +71,7 @@ class AddGitCommand extends ContainerAwareCommand
         $this->rootDir = $this->getContainer()->getParameter('kernel.project_dir');
         $this->gitUrl = rtrim($input->getArgument('repository'), '/');
         $this->packageName = rtrim($input->getArgument('package'), '/');
-        exec("cd \"".$this->rootDir.'/vendor/'.$this->packageName."\" && git init && git remote add origin ".$this->gitUrl." && git fetch --all && git reset --hard origin/master 2>&1", $output);
+        exec("cd \"".$this->rootDir.'/vendor/'.$this->packageName."\" && rm -Rf .git && git init && git remote add origin ".$this->gitUrl." && git fetch --all && git reset --hard origin/master 2>&1", $output);
         // print_r($output);
         // die();
 
