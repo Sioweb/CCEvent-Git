@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "sioweb/ccevent": "^1.1.5",
+        "php": "^7.1||^8.0",
+        "sioweb/ccevent": "^1.1.5||^2.0",
         "symfony/console": "*"
     },
     "autoload": {
